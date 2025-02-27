@@ -1,5 +1,5 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, createHashRouter, RouterProvider } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Cart from "./Components/Cart/Cart";
 import Login from "./Components/Login/Login";
@@ -27,7 +27,7 @@ function App() {
 
   const x = new QueryClient();
 
-  const route = createBrowserRouter([
+  const route = createHashRouter([
     {
       path: "",
       element: <Layout />,
